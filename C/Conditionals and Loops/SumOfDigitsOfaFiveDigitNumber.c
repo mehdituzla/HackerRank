@@ -30,11 +30,11 @@ int main() {
         //Divide "n" to needed 10th power to calculate first digit's value
         //For example if the n = 10564, then we need to divide it to 10^4 to calculate biggest digit's value
         //Needed 10th power is equal to digit count - 1 in every time
-        sum += (n / ((int) pow(10, (digitCount - 1))));
+        sum += n / (int) pow(10, digitCount - 1);
         
         //After the digit value added to "sum", then remainder value of last calculation
         //is assigning to the "n"
-        n = (n % (int) (pow(10, (digitCount - 1))));
+        n = n % (int) pow(10, digitCount - 1);
         
         
     } while (n != 0);
